@@ -2,4 +2,13 @@
 " Maintaner:	Ben Phillips <ben@ben-phillips.net>
 " Version:	0.1
 
+if (exists("g:fastcommit"))
+	finish
+endif
+let g:fastcommit=1
 
+fun! s:FastCommit()
+
+endfun
+
+command! -nargs=0 FastCommit call s:FastCommit()
