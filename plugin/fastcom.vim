@@ -8,7 +8,8 @@ endif
 let g:fastcommit=1
 
 fun! s:FastCommit()
-
+	:!git add .
+	:!git commit -m "."
 endfun
 
 command! -nargs=0 FastCommit call s:FastCommit()
